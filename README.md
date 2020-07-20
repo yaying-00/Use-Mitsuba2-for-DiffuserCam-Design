@@ -1,4 +1,4 @@
-# Mitsuba2-Differentiable-Rendering
+# Use-Mitsuba2-for-DiffuserCam-Design
 
 In typical computational cameras, the optical system (for example, the physical shape of a diffuser) is first designed and fixed. Then we tune the parameters in the image reconstruction algorithm to reproduce the image well. In contrast to this sequential design method, we hope to jointly optimize the optical system and the parameters of the reconstruction model. Therefore, we need to build a fully-differentiable simulation model, mapping the source data to the reconstructed one. The model should include **a differentiable renderer**. It can be used to generate the point spread function given an arbitrary diffuser surface, or alternatively it can be used to directly generate the simulated measurement given the input 2D or 3D dataset. 
 
