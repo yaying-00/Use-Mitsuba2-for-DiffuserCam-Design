@@ -25,7 +25,7 @@ source setpath.sh
 
 ## Running the examples
 
-The exampe codes follows `optim_vertices.py` in the [test repo](https://github.com/loubetg/mitsuba2-reparam-tests) and `invert_heightfield.py` in the [pathreparam-optix7 branch examples](https://github.com/mitsuba-renderer/mitsuba2/tree/pathreparam-optix7/docs/examples/10_inverse_rendering). The code can be executed with Python. For example,
+The exampe codes follow `optim_vertices.py` in the [test repo](https://github.com/loubetg/mitsuba2-reparam-tests) and `invert_heightfield.py` in the [pathreparam-optix7 branch examples](https://github.com/mitsuba-renderer/mitsuba2/tree/pathreparam-optix7/docs/examples/10_inverse_rendering). The code can be executed with Python. For example,
 
 ```
 python copper_optm.py
