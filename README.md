@@ -8,7 +8,7 @@ Paper and conference video can be found [here](http://rgl.epfl.ch/publications/N
 
 [Mitsuba 2 documentation](https://mitsuba2.readthedocs.io/en/latest/src/getting_started/intro.html) is a good resource for installation, tutorials and references.
 
-This repository contains a few examples for optimizing a diffuser. The slides which contains the corresponding optimization results and some prons & cons about the current Mitsuba 2 version can be found [here](https://docs.google.com/presentation/d/1_vz62zo_9vgIiwe38vPrAgo-MeKZbOf1P657d3Er7dU/edit#slide=id.g82412729a5_0_267). 
+This repository contains a few examples for optimizing a diffuser. The slides which contains the corresponding optimization results and some pros & cons about the current Mitsuba 2 version can be found [here](https://docs.google.com/presentation/d/1_vz62zo_9vgIiwe38vPrAgo-MeKZbOf1P657d3Er7dU/edit#slide=id.g82412729a5_0_267). 
 
 ## Installation and Compiling
 
