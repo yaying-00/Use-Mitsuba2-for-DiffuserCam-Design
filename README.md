@@ -44,7 +44,7 @@ python copper_optm.py
    * `task = 'bumpy2bumpy'`    
         Optimize a bumpy diffuser to be another bumpy diffuser.
 
-3. `diffuser_optm_smooth.py`: Optimize the height profile of a glass panel. Add Gaussiam smoothing between optimizations.     
+3. `diffuser_optm_smooth.py`: Optimize the height profile of a glass panel. Add Gaussian smoothing between optimizations.     
     This file also contains three tasks as explained above. Different tasks can be specified using the `task` flag.
 
     Some details about the gaussian smoothing: After optimizing for n (iterations for the inner loop) iterations, convert the vertex positions to a NumPy array and add a gaussian smoothing to it using SciPy function. Then convert that NumPy array back to its original enoki.cuda_autodiff datatype, use it as the initial guess and start another optimization. This is repeated over and over. 
