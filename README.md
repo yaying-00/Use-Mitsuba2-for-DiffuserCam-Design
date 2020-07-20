@@ -1,6 +1,6 @@
 # Mitsuba2-Differentiable-Rendering
 
-In typical computational cameras, the optical system is designed first and fixed. Then the parameters in the image reconstruction algorithm are tuned to reproduce the image well. In contrast to this sequential design method, we hope to jointly optimize the optical system (e.g., the physical shape of the diffuser) and the parameters of the reconstruction model. Therefore, we need to build a fully-differentiable simulation model, mapping the source data to the reconstructed one. The model should include **a differentiable renderer**. It can be used to generate the point spread function given an arbitrary diffuser surface, or alternatively it can be used to directly generate the simulated measurement given the input 2D or 3D dataset. 
+In typical computational cameras, the optical system (for example, the physical shape of a diffuser) is first designed and fixed. Then we tune the parameters in the image reconstruction algorithm to reproduce the image well. In contrast to this sequential design method, we hope to jointly optimize the optical system and the parameters of the reconstruction model. Therefore, we need to build a fully-differentiable simulation model, mapping the source data to the reconstructed one. The model should include **a differentiable renderer**. It can be used to generate the point spread function given an arbitrary diffuser surface, or alternatively it can be used to directly generate the simulated measurement given the input 2D or 3D dataset. 
 
 [Mitsuba 2](http://www.mitsuba-renderer.org/) is a physically-based rendering tool, which can be used as a differentiable renderer in the end-to-end optimization.
 
@@ -8,7 +8,7 @@ Paper and conference video can be found [here](http://rgl.epfl.ch/publications/N
 
 [Mitsuba 2 documentation](https://mitsuba2.readthedocs.io/en/latest/src/getting_started/intro.html) is a good resource for installation, tutorials and references.
 
-This repository contains a few examples for optimizing a diffuser. The slides which contains the corresponding optimization results can be found [here](https://docs.google.com/presentation/d/1_vz62zo_9vgIiwe38vPrAgo-MeKZbOf1P657d3Er7dU/edit#slide=id.g82412729a5_0_267). 
+This repository contains a few examples for optimizing a diffuser. The slides which contains the corresponding optimization results and some prons & cons about the current Mitsuba 2 version can be found [here](https://docs.google.com/presentation/d/1_vz62zo_9vgIiwe38vPrAgo-MeKZbOf1P657d3Er7dU/edit#slide=id.g82412729a5_0_267). 
 
 ## Installation and Compiling
 
@@ -45,4 +45,9 @@ python copper_optm.py
         Optimize a bumpy diffuser to be another bumpy diffuser.
 
 3. `diffuser_optm_smooth.py`: Optimize the height profile of a glass panel. Add Gaussiam smoothing between optimizations.     
-    This file also contains three tasks as explained above. 
+    This file also contains three tasks as explained above. Different tasks can be specified using the `task` flag.
+
+    Some details about the gaussian smoothing: After optimizing for n (iterations for the inner loop) iterations, convert the vertex positions to a NumPy array and add a gaussian smoothing to it using SciPy function. Then convert that NumPy array back to its original enoki.cuda_autodiff datatype, use it as the initial guess and start another optimization. This is repeated over and over. 
+
+
+
