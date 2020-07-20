@@ -8,7 +8,7 @@ Paper and conference video can be found [here](http://rgl.epfl.ch/publications/N
 
 [Mitsuba 2 documentation](https://mitsuba2.readthedocs.io/en/latest/src/getting_started/intro.html) is a good resource for installation, tutorials and references.
 
-This repository contains a few examples for optimizing a diffuser. The slides which contains the corresponding optimization results and some prons & cons about the current Mitsuba 2 version can be found [here](https://docs.google.com/presentation/d/1_vz62zo_9vgIiwe38vPrAgo-MeKZbOf1P657d3Er7dU/edit#slide=id.g82412729a5_0_267). 
+This repository contains a few examples for optimizing a diffuser. The slides which contains the corresponding optimization results and some pros & cons about the current Mitsuba 2 version can be found [here](https://docs.google.com/presentation/d/1_vz62zo_9vgIiwe38vPrAgo-MeKZbOf1P657d3Er7dU/edit#slide=id.g82412729a5_0_267). 
 
 ## Installation and Compiling
 
@@ -25,7 +25,7 @@ source setpath.sh
 
 ## Running the examples
 
-The code can then be executed with Python. For example,
+The exampe codes follows `optim_vertices.py` in the [test repo](https://github.com/loubetg/mitsuba2-reparam-tests) and `invert_heightfield.py` in the [pathreparam-optix7 branch examples](https://github.com/mitsuba-renderer/mitsuba2/tree/pathreparam-optix7/docs/examples/10_inverse_rendering). The code can be executed with Python. For example,
 
 ```
 python copper_optm.py
