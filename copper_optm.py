@@ -165,8 +165,10 @@ path_reparam_str =  """
 	<boolean name="disable_gradient_diffuse" value="false"/>
 </integrator>"""
 
+# width and height determines the resolution of rendered image
 width   = 128
 height  = 128
+# spp: samples per pixel
 spp_ref = 64
 spp_opt = 8
 
@@ -251,7 +253,7 @@ loss_list = []
 diff_vertex_ref = []
 diff_vertex_init = []
 
-for i in range(1555550):
+for i in range(150):
 	unravel(vertex_positions + Vector3f(0,0,1) * params_opt['displacements'], params[vertex_pos_key])
 	params.set_dirty(vertex_pos_key)
 	params.update()
