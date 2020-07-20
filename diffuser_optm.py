@@ -140,7 +140,7 @@ def make_scene(integrator, spp, w=256, h=256):
 			<float name="alpha" value="0.01"/>
 		</bsdf>
 
-		<!-- The copper surface to optimize -->
+		<!-- The diffuser surface to optimize -->
 		<shape type="ply" id="grid_mesh">
 			<string name="filename" value="scene/grid_256.ply"/>
 			<transform name="to_world">
@@ -150,7 +150,7 @@ def make_scene(integrator, spp, w=256, h=256):
 			<ref id = "face"/>
 		</shape>
 
-		<!-- Other surfaces of the copper panel -->
+		<!-- Other surfaces of the diffuser -->
 		<shape type="obj">
 			<string name="filename" value="scene/glass_noback_1.obj"/>
 			<ref id = "face"/>
@@ -161,7 +161,7 @@ def make_scene(integrator, spp, w=256, h=256):
 			<rgb name="reflectance" value="0.0, 0.0, 0.0"/>
 		</bsdf>
 		
-		<!-- Aperture arond the diffuser -->
+		<!-- Aperture around the diffuser -->
 		<shape type="obj">
 			<string name="filename" value="scene/aperture.obj"/>
 			<ref id = "aperture"/>
